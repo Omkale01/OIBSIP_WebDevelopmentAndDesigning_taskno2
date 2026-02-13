@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- Custom Animations -->
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-900 text-white">
+    <header class="relative z-10">
+        <nav class="fixed w-full">
+            <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-400">
+                    Om’s Portfolio
+                </div>
+
+                <ul class="flex gap-8 text-zinc-300 font-medium">
+                    <li><a href="/" class="hover:text-indigo-400 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition">Projects</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12">
+
+            <!-- LEFT CONTENT -->
+            <div class="space-y-6 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                    Let’s build something
+                    <span class="text-indigo-400">amazing</span> together
+                </h1>
+
+                <p class="text-zinc-400 max-w-md">
+                    I’m a frontend developer focused on clean UI, smooth animations,
+                    and thoughtful user experiences. If you have an idea or project,
+                    I’d love to hear about it.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-zinc-300 hover:text-indigo-400 transition">
+                        <span class="text-xl"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                                alt="Gmail" class="w-5 h-5" /></span>
+                        <span>okofficial012@gmail.com</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-zinc-300 hover:text-indigo-400 transition">
+                        <span class="text-xl">💼</span>
+                        <span>linkedin.com/in/example</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-zinc-300 hover:text-indigo-400 transition">
+                        <span class="text-xl">🐙</span>
+                        <span>github.com/example</span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-zinc-500 pt-4">
+                    I usually reply within 24 hours. No pressure — even rough ideas are welcome.
+                </p>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <form action="/contact-me" method="post" class="bg-zinc-800/60 backdrop-blur-xl rounded-2xl p-8 space-y-6 shadow-2xl animate-slide-up">
+
+                <!-- Name -->
+                <div class="relative">
+                    <input type="text" placeholder="Enter your name" name="name"
+                        class="peer w-full bg-transparent border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-400 transition" />
+                    
+                </div>
+
+                <!-- Email -->
+                <div class="relative">
+                    <input type="email" placeholder="Enter your email" name="email"
+                        class="peer w-full bg-transparent border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-400 transition" />
+                    
+                </div>
+
+                <!-- Message -->
+                <div class="relative">
+                    <textarea rows="5" placeholder="Type the message" name="message"
+                        class="peer w-full bg-transparent border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-400 transition resize-none"></textarea>
+                    
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-indigo-500 hover:bg-indigo-600 active:scale-95 transition-all text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-indigo-500/40">
+                    Send message 🚀
+                </button>
+
+                <p class="text-xs text-zinc-500 text-center">
+                    By submitting this form, you agree to be contacted regarding your message.
+                </p>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
